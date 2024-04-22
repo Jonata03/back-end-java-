@@ -19,7 +19,7 @@ public class Gerente extends Funcionario{
     }
     @Override
     public double getBonificacao(){
-        return super.getBonificacao() * 0.15;
+        return this.salario * 1.4 + 1000;
     }
 
 

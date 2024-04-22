@@ -10,7 +10,5 @@ public abstract  class Funcionario {
 
 
     //METODO ABSTRATO
-    public double getBonificacao(){
-        return this.salario * 0.10+ 1000;
-    }
+    public abstract double getBonificacao();
 }
