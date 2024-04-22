@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/herança_polimorfismo//herança_polimorfismo/.iml" filepath="$PROJECT_DIR$/herança_polimorfismo//herança_polimorfismo/.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basico/basico/basico.iml" filepath="$PROJECT_DIR$/basico/basico/basico.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basico/exercicio/exercicio.iml" filepath="$PROJECT_DIR$/basico/exercicio/exercicio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herança_polimorfismo/exercicio1/exercicio1.iml" filepath="$PROJECT_DIR$/herança_polimorfismo/exercicio1/exercicio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modificadores/exercicio/exercicio2.iml" filepath="$PROJECT_DIR$/modificadores/exercicio/exercicio2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basico/inicio-POO/inicio-POO.iml" filepath="$PROJECT_DIR$/basico/inicio-POO/inicio-POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/orientacao-objeto.iml" filepath="$PROJECT_DIR$/.idea/orientacao-objeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herança_polimorfismo/polimorfismo/polimorfismo.iml" filepath="$PROJECT_DIR$/herança_polimorfismo/polimorfismo/polimorfismo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modificadores/teste/teste.iml" filepath="$PROJECT_DIR$/modificadores/teste/teste.iml" />
+    </modules>
+  </component>
+</project>
