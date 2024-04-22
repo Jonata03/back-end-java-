@@ -4,17 +4,15 @@ import lombok.Setter;
 @Setter
 @Getter
 
-public class Gerente extends Funcionario{
+public class Gerente extends Funcionario implements Autenticavel{
     private int numeroDeFuncionariosGerenciados;
     private int senha;
 
     public boolean autentica(int senha){
-        if(this.senha == senha){
-            System.out.println("Acesso Permitido!");
-            return true;
-        }else{
-            System.out.println("Acesso negado!");
+        if(this.senha != senha){
             return false;
+        }else{
+            return true;
         }
     }
     @Override
