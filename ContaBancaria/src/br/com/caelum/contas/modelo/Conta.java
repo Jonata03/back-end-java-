@@ -13,11 +13,22 @@ public abstract class Conta {
     public abstract String getTipo();
 
     public void saca(double valor) {
-        this.saldo = this.saldo - valor;
+        if(this.saldo < valor){
+            throw new IllegalArgumentException("Saldo insuficiente!");
+        } else if (valor < 0) {
+            throw  new IllegalArgumentException("Digite um numero positivo!");
+        } else{
+            this.saldo -= valor;
+        }
     }
 
     public void deposita(double quantidade) {
-        this.saldo += quantidade;
+        if (quantidade < 0 ){
+            throw new IllegalArgumentException("Digite um numero positivo!");
+        }else{
+            this.saldo += quantidade;
+        }
+
     }
 
     public void transfere(double valor, Conta conta){
