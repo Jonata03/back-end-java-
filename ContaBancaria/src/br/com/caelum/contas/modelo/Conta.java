@@ -1,5 +1,6 @@
 package br.com.caelum.contas.modelo;
 
+import br.com.caelum.contas.SaldoInsuficienteException;
 import lombok.*;
 
 @Getter
@@ -12,7 +13,7 @@ public abstract class Conta {
 
     public abstract String getTipo();
 
-    public void saca(double valor) {
+    public void saca(double valor){
         if(this.saldo < valor){
             throw new IllegalArgumentException("Saldo insuficiente!");
         } else if (valor < 0) {
@@ -34,5 +35,17 @@ public abstract class Conta {
     public void transfere(double valor, Conta conta){
         this.saca(valor);
         conta.deposita(valor);
+    }
+    public String toString(){
+        return "[titular = " + titular.toUpperCase() + ", numero=" + numero + ", agencia = " + agencia + "]";
+    }
+    public boolean equals (Object obj){
+//        verifica se o object nao é nulo
+        if (obj == null){
+            return false;
+        }
+
+        Conta outraConta = (Conta) obj;
+        return this.numero == outraConta.numero && this.agencia.equals(outraConta.agencia);
     }
 }
