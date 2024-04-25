@@ -5,13 +5,15 @@ import lombok.*;
 
 @Getter
 @Setter
-public abstract class Conta {
+public class Conta implements Comparable<Conta>{
     int numero;
     String agencia;
     String titular;
     protected double saldo;
 
-    public abstract String getTipo();
+    public String getTipo() {
+        return null;
+    }
 
     public void saca(double valor){
         if(this.saldo < valor){
@@ -47,5 +49,10 @@ public abstract class Conta {
 
         Conta outraConta = (Conta) obj;
         return this.numero == outraConta.numero && this.agencia.equals(outraConta.agencia);
+    }
+
+    @Override
+    public int compareTo(Conta outraConta) {
+        return this.titular.compareTo(outraConta.titular);
     }
 }

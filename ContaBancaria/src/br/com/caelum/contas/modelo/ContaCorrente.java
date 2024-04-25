@@ -3,6 +3,8 @@ package br.com.caelum.contas.modelo;
 import br.com.caelum.contas.SaldoInsuficienteException;
 
 public class ContaCorrente extends Conta implements Tributavel{
+    // Implementação da classe
+
     @Override
     public void saca(double valor){
         if(this.saldo < valor){
@@ -23,4 +25,5 @@ public class ContaCorrente extends Conta implements Tributavel{
     public double getValorImposto() {
         return this.saldo * 0.01;
     }
+
 }
