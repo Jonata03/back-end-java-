@@ -11,6 +11,16 @@ public class Conta implements Comparable<Conta>{
     String titular;
     protected double saldo;
 
+    public Conta(int numero, String agencia, String titular,double saldo) {
+        this.numero = numero;
+        this.agencia = agencia;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+    public class Conta(){
+
+    }
+
     public String getTipo() {
         return null;
     }

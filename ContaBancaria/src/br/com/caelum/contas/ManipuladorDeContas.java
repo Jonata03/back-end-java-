@@ -3,8 +3,10 @@ package br.com.caelum.contas;
 import br.com.caelum.contas.modelo.Conta;
 import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.contas.modelo.ContaPoupanca;
+import br.com.caelum.contas.RepositorioDeContas;
 import br.com.caelum.javafx.api.util.Evento;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,7 +25,17 @@ public class ManipuladorDeContas{
         this.conta.setNumero(evento.getInt("numero"));
         this.conta.setTitular(evento.getString("titular"));
     }
+    public void salvaDados(Evento evento) throws IOException {
+        System.out.println(evento.getLista("listaContas"));
 
+        List<Conta> conta = evento.getLista("listaContas");
+        RepositorioDeContas repositorio = new RepositorioDeContas();
+        repositorio.salva(conta);
+    }
+    public List<Conta> carregaDados(){
+        RepositorioDeContas repositorio = new RepositorioDeContas();
+        return repositorio.carrega();
+    }
 
     public void deposita(Evento evento){
         double valor = evento.getDouble("valorOperacao");

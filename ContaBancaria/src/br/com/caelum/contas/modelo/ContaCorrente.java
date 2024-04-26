@@ -5,6 +5,15 @@ import br.com.caelum.contas.SaldoInsuficienteException;
 public class ContaCorrente extends Conta implements Tributavel{
     // Implementação da classe
 
+
+    public ContaCorrente() {
+        super();
+    }
+
+    public ContaCorrente(int numero, String agencia, String titular, double saldo) {
+        super(numero,agencia,titular,saldo);
+    }
+
     @Override
     public void saca(double valor){
         if(this.saldo < valor){

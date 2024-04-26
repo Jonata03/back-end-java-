@@ -14,14 +14,12 @@ public class TestaPerformance {
         Conta c2 = new ContaCorrente();
         c2.deposita(3000);
 
-        Map mapaDeContas = new HashMap();
+        Map<String, Conta> mapaDeContas = new HashMap();
         mapaDeContas.put("diretor",c1);
         mapaDeContas.put("Gerente",c2);
 
         Conta contaDoDiretor = (Conta) mapaDeContas.get("diretor");
         System.out.println(contaDoDiretor.getSaldo());
-
-
 
 
         /* System.out.println("iniciando...");

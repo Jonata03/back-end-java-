@@ -54,7 +54,7 @@ public class TestaCollections {
             String palavra = i.next();
             System.out.println(palavra);
         }*/
-        ContaCorrente c1 = new ContaCorrente();
+        /*ContaCorrente c1 = new ContaCorrente();
         c1.deposita(1000);
 
         ContaCorrente c2 = new ContaCorrente();
@@ -68,6 +68,16 @@ public class TestaCollections {
 
 
         ContaCorrente contaDoDiretor = mapaDeContas.get("diretor");
-        System.out.println(contaDoDiretor.getSaldo());
+        System.out.println(contaDoDiretor.getSaldo());*/
+
+
+        Collection<Integer> n = new TreeSet<>();
+//      o TreeSet por ser em um arvore balanceada os valores sempre vao ser em ordem crescente
+        for(int i = 1000;i >= 1;i--){
+            n.add(i);
+        }
+        n.forEach(s-> System.out.println(s));
+
+
     }
 }
