@@ -1,7 +1,7 @@
 package br.com.caelum.contas.modelo;
 
-import br.com.caelum.contas.SaldoInsuficienteException;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -17,7 +17,7 @@ public class Conta implements Comparable<Conta>{
         this.titular = titular;
         this.saldo = saldo;
     }
-    public class Conta(){
+    public Conta(){
 
     }
 

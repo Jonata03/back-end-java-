@@ -1,0 +1,6 @@
+Conta Poupanca, 1234, 4321, jonata, 2050.0
+Conta Poupanca, 12313, 1231 23, mauro , 50.0
+Conta Poupanca, 4234234, 234234, jonata, 0.0
+conta corrente, 23423, 243234, marli, 2000.0
+Conta Poupanca, 213123, 13123123, mari, 0.0
+conta corrente, 23234, 1123, rivanildo, 0.0

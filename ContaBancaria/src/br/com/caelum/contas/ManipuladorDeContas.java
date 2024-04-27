@@ -3,7 +3,6 @@ package br.com.caelum.contas;
 import br.com.caelum.contas.modelo.Conta;
 import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.contas.modelo.ContaPoupanca;
-import br.com.caelum.contas.RepositorioDeContas;
 import br.com.caelum.javafx.api.util.Evento;
 
 import java.io.IOException;
@@ -14,11 +13,15 @@ public class ManipuladorDeContas{
     private Conta conta;
     public void criaConta(Evento evento){
         String tipo = evento.getSelecionadoNoRadio("tipo");
+        String agencia = evento.getString("agencia");
+        String titular = evento.getString("titular");
+        int numero = Integer.parseInt(evento.getString("numero"));
+        double saldo = 0;
         if(tipo.equals("Conta Corrente")){
-            this.conta = new ContaCorrente();
+            this.conta = new ContaCorrente(numero,agencia,titular,saldo);
         }
         else if (tipo.equals("Conta Poupança")) {
-            this.conta = new ContaPoupanca();
+            this.conta = new ContaPoupanca(numero,agencia,titular,saldo);
         }
 
         this.conta.setAgencia(evento.getString("agencia"));
